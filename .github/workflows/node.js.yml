@@ -38,9 +38,6 @@ jobs:
         node-version: 18.x
 
     - name: Build
-      env:
-            APIHOST: ${{ vars.APIHOST }}
-            ASSETSHOST: ${{ vars.ASSETSHOST }}
       run: |
         npm install
         npm run build
