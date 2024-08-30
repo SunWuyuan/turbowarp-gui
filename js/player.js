@@ -42481,7 +42481,7 @@ const ProjectFetcherHOC = function ProjectFetcherHOC(WrappedComponent) {
     vm: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.instanceOf(scratch_vm__WEBPACK_IMPORTED_MODULE_10___default.a)
   };
   ProjectFetcherComponent.defaultProps = {
-    assetHost: 'http://sizcxor5t.bkt.gdipper.com',
+    assetHost: 'https://scratch-assets.192325.xyz',
     projectHost: 'https://scratch.192325.xyz/projects/source'
   };
   const mapStateToProps = state => ({
