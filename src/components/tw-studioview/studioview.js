@@ -298,11 +298,11 @@ StudioView.prototype.onselect = function (id, el) { };
 StudioView.prototype.onpageload = function () { };
 StudioView.prototype.onend = function () { };
 
-StudioView.STUDIO_API = 'http://localhost:3068/studios/$id/projects?offset=$offset';
+StudioView.STUDIO_API = 'https://scratch.192325.xyz/studios/$id/projects?offset=$offset';
 
 // The URL to download thumbnails from.
 // $id is replaced with the project's ID.
-StudioView.THUMBNAIL_SRC = 'http://localhost:3068/thumbnails/$id';
+StudioView.THUMBNAIL_SRC = 'https://scratch.192325.xyz/thumbnails/$id';
 
 // The URL for project pages.
 // $id is replaced with the project ID.

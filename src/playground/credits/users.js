@@ -10,7 +10,7 @@ const shuffle = list => {
 
 const fromHardcoded = ({userID = '0', username}) => {
     const result = {
-        image: `http://localhost:8080/avatars/${userID}`,
+        image: `https://scratch.192325.xyz/avatars/${userID}`,
         text: username
     };
     if (username && userID !== '0') {

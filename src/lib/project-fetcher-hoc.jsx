@@ -199,7 +199,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
     };
     ProjectFetcherComponent.defaultProps = {
         assetHost: 'http://sizcxor5t.bkt.gdipper.com',
-        projectHost: 'http://localhost:3068/projects/source'
+        projectHost: 'https://scratch.192325.xyz/projects/source'
     };
 
     const mapStateToProps = state => ({
