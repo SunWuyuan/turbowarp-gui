@@ -40109,7 +40109,7 @@ const ProjectFetcherHOC = function ProjectFetcherHOC(WrappedComponent) {
   };
   ProjectFetcherComponent.defaultProps = {
     assetHost: 'http://sizcxor5t.bkt.gdipper.com',
-    projectHost: 'http://localhost:3068/projects/source'
+    projectHost: 'https://scratch.192325.xyz/projects/source'
   };
   const mapStateToProps = state => ({
     isCreatingNew: Object(_reducers_project_state__WEBPACK_IMPORTED_MODULE_6__["getIsCreatingNew"])(state.scratchGui.projectState.loadingState),
@@ -42714,7 +42714,7 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 const fetchProjectMeta = async projectId => {
-  const urls = ["http://localhost:3068/projects/".concat(projectId)];
+  const urls = ["https://scratch.192325.xyz/projects/".concat(projectId)];
   let firstError;
   for (const url of urls) {
     try {
@@ -42770,7 +42770,7 @@ const TWProjectMetaFetcherHOC = function TWProjectMetaFetcherHOC(WrappedComponen
               this.props.onSetProjectTitle(title);
             }
             const authorName = data.author.username;
-            const authorThumbnail = "http://localhost:8080/avatars/".concat(data.author.id);
+            const authorThumbnail = "https://scratch.192325.xyz/avatars/".concat(data.author.id);
             this.props.onSetAuthor(authorName, authorThumbnail);
             const instructions = data.instructions || '';
             const credits = data.description || '';

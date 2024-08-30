@@ -1727,7 +1727,7 @@ const fromHardcoded = _ref => {
     username
   } = _ref;
   const result = {
-    image: "http://localhost:8080/avatars/".concat(userID),
+    image: "https://scratch.192325.xyz/avatars/".concat(userID),
     text: username
   };
   if (username && userID !== '0') {
