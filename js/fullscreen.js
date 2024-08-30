@@ -24470,11 +24470,11 @@ StudioView.prototype.getURL = function () {
 StudioView.prototype.onselect = function (id, el) {};
 StudioView.prototype.onpageload = function () {};
 StudioView.prototype.onend = function () {};
-StudioView.STUDIO_API = 'https://scratch.192325.xyz/api/studios/$id/projects?offset=$offset';
+StudioView.STUDIO_API = 'http://localhost:3068/studios/$id/projects?offset=$offset';
 
 // The URL to download thumbnails from.
 // $id is replaced with the project's ID.
-StudioView.THUMBNAIL_SRC = 'https://scratch.192325.xyz/thumbnails/$id?width=144&height=108';
+StudioView.THUMBNAIL_SRC = 'http://localhost:3068/thumbnails/$id';
 
 // The URL for project pages.
 // $id is replaced with the project ID.
@@ -42481,8 +42481,8 @@ const ProjectFetcherHOC = function ProjectFetcherHOC(WrappedComponent) {
     vm: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.instanceOf(scratch_vm__WEBPACK_IMPORTED_MODULE_10___default.a)
   };
   ProjectFetcherComponent.defaultProps = {
-    assetHost: 'https://scratch.192325.xyz',
-    projectHost: 'https://scratch.192325.xyz/api/projectssource'
+    assetHost: 'http://sizcxor5t.bkt.gdipper.com',
+    projectHost: 'http://localhost:3068/projects/source'
   };
   const mapStateToProps = state => ({
     isCreatingNew: Object(_reducers_project_state__WEBPACK_IMPORTED_MODULE_6__["getIsCreatingNew"])(state.scratchGui.projectState.loadingState),
@@ -43766,7 +43766,7 @@ class Storage extends _turbowarp_scratch_storage__WEBPACK_IMPORTED_MODULE_0___de
     this.assetHost = assetHost;
   }
   getAssetGetConfig(asset) {
-    return "".concat(this.assetHost, "/asset/").concat(asset.assetId, ".").concat(asset.dataFormat, "/get/");
+    return "".concat(this.assetHost, "/").concat(asset.assetId, ".").concat(asset.dataFormat);
   }
   getAssetCreateConfig(asset) {
     return {
@@ -45145,7 +45145,7 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 const fetchProjectMeta = async projectId => {
-  const urls = ["https://scratch.192325.xyz/api/projects/".concat(projectId), "https://trampoline.turbowarp.xyz/api/projects/".concat(projectId)];
+  const urls = ["http://localhost:3068/projects/".concat(projectId)];
   let firstError;
   for (const url of urls) {
     try {
@@ -45201,7 +45201,7 @@ const TWProjectMetaFetcherHOC = function TWProjectMetaFetcherHOC(WrappedComponen
               this.props.onSetProjectTitle(title);
             }
             const authorName = data.author.username;
-            const authorThumbnail = "https://scratch.192325.xyz/avatars/".concat(data.author.id);
+            const authorThumbnail = "http://localhost:8080/avatars/".concat(data.author.id);
             this.props.onSetAuthor(authorName, authorThumbnail);
             const instructions = data.instructions || '';
             const credits = data.description || '';
